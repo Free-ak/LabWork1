@@ -1,6 +1,6 @@
 package Lab2.continuousDistributions;
 
-import Lab2.integral;
+import Lab3.integral;
 
 public class fisherDistributions extends continuousDistributions{
     private final double k1;

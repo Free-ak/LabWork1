@@ -1,4 +1,4 @@
-package Lab2;
+package Lab3;
 
 import Lab2.continuousDistributions.continuousDistributions;
 

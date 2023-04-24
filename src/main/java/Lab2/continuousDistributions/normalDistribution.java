@@ -1,6 +1,6 @@
 package Lab2.continuousDistributions;
 
-import Lab2.integral;
+import Lab3.integral;
 
 public class normalDistribution extends continuousDistributions {
     private final double o;
