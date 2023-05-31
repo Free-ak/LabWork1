@@ -11,12 +11,12 @@ public class UniformDistribution {
     public void inputOfVariablesN(Scanner in){
 //        String ifn = " Введите число h (h > 0) ";
 
-        String ifN = " Введите число N (N > 0): ";
+        String ifN = " Введите число СВ (N > 0): ";
         System.out.print(ifN);
         N = checkingForPositivityInt(in, ifN);
     }
 
-    public Integer checkingForPositivityInt(Scanner in, String s1) {
+    public static Integer checkingForPositivityInt(Scanner in, String s1) {
         String uncorrected = " Введены некорректные данные.";
         int value=in.nextInt();
         while (value <= 0) {
@@ -25,10 +25,10 @@ public class UniformDistribution {
         }
         return value;
     }
-    private Double checkingForPositivityFloat(Scanner in, String s1) {
+    public static Double checkingForPositivityDouble(Scanner in, String s1) {
         String uncorrected = " Введены некорректные данные.";
         double value=in.nextDouble();;
-        while (value < 0.0||value>1.0) {
+        while (value <=0.0) {
             System.out.print(uncorrected + s1);
             value = in.nextFloat();
         }

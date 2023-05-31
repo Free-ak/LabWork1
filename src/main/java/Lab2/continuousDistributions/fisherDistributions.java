@@ -1,6 +1,6 @@
 package Lab2.continuousDistributions;
 
-import Lab3.integral;
+import Lab2.integral;
 
 public class fisherDistributions extends continuousDistributions{
     private final double k1;
@@ -51,4 +51,9 @@ public class fisherDistributions extends continuousDistributions{
               }
               }
         }
+
+    @Override
+    public interfaceFunction func() {
+        return null;
     }
+}

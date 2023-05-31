@@ -9,11 +9,11 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-abstract class oneDimensionalDistributions {
+public abstract class oneDimensionalDistributions {
     protected List<Double> Px = new ArrayList<>();
     protected List<Integer> x = new ArrayList<>();
     protected List<Double> fx = new ArrayList<>();
-    public static BigDecimal getFactorial(int f) {
+    public static BigDecimal getFactorial(double f) {
         if (f <= 1) {
             return BigDecimal.valueOf(1);
         } else {

@@ -1,6 +1,6 @@
 package Lab2.continuousDistributions;
 
-import Lab3.integral;
+import Lab2.integral;
 
 public class chiDistribution extends continuousDistributions{
     private final double k;
@@ -36,5 +36,10 @@ public class chiDistribution extends continuousDistributions{
 
             }
         }
+    }
+
+    @Override
+    public interfaceFunction func() {
+        return null;
     }
 }

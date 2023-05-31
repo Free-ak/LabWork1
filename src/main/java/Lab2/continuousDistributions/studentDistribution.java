@@ -1,6 +1,6 @@
 package Lab2.continuousDistributions;
 
-import Lab3.integral;
+import Lab2.integral;
 
 public class studentDistribution extends continuousDistributions{
     private final double k;
@@ -41,6 +41,10 @@ public class studentDistribution extends continuousDistributions{
                     (Math.pow(1+Math.pow(i,2)/k,-(k+1)/2)));
             Fx.add(integral.calculation(-50,i,func2));
             }
+    }
+    @Override
+    public interfaceFunction func() {
+        return null;
     }
 }
 

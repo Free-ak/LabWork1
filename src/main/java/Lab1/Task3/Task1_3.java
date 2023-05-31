@@ -5,10 +5,10 @@ import jfree__.BarChart;
 import jfree__.LineChart;
 import org.jfree.data.category.DefaultCategoryDataset;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 public class Task1_3 extends Task1_2 {
-    private final List<Double[]> Data  =  addValuesData(true);
 
     public Task1_3(List<Float> row) {
         super(row);
@@ -16,6 +16,7 @@ public class Task1_3 extends Task1_2 {
 
     private DefaultCategoryDataset createDataset(int indexValueData, boolean bool) {
         DefaultCategoryDataset dataset = new DefaultCategoryDataset( );
+        List<Double[]> Data  =  addValuesData(bool);
         Double[] str = new Double[7];
         for(var row : Data) {
             int i =0;
@@ -23,9 +24,9 @@ public class Task1_3 extends Task1_2 {
                 str[i] = variable;
                 i++;
             }
-            if(!bool){dataset.addValue( str[indexValueData] , " ", str[2] );
+            if(!bool){dataset.addValue( str[indexValueData] , " ", new DecimalFormat("0.00").format(str[2]) );
             }
-            else {dataset.addValue( str[indexValueData] , " ", str[0] );
+            else {dataset.addValue( str[indexValueData] , " ", new DecimalFormat("0.00").format(str[0]) );
             }
             }
         return dataset;
@@ -33,7 +34,7 @@ public class Task1_3 extends Task1_2 {
 
     private LineChart[] createPolygons(boolean bool){
         int a;
-        if (!bool) a=3;
+        if (!bool) a=3;//false
         else a=1;
         return new LineChart[]{
                 new LineChart(              //frequencyPolygon

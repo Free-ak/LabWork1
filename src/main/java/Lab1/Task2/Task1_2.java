@@ -27,7 +27,7 @@ public class Task1_2 {
         double relativeFrequency;
         double cumulativeRelativeFrequency = 0.0;
         int j = 0;
-        if (!bool) {
+        if ( !bool) {
             for (int i = 0; i < row_sort.size(); ) {
 
                 while (i < row_sort.size()) {

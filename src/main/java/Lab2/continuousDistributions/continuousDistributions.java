@@ -15,7 +15,10 @@ public abstract class continuousDistributions {
     protected double a;
     protected double b;
     protected double h;
-    public interface interfaceFunction{
+
+    public abstract interfaceFunction func();
+
+    public abstract interface interfaceFunction{
         double function(double t);
         double function(double t,double k);
     }
@@ -23,6 +26,8 @@ public abstract class continuousDistributions {
         this.a=d1;
         this.b=d2;
         this.h=d3;
+    }
+    public continuousDistributions(){
     }
     public void print (String s) {
         JFrame frame = simpleGui.frameDefault(s, 370, 400);

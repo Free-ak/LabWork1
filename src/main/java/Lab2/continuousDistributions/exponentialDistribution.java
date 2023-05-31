@@ -19,4 +19,8 @@ public class exponentialDistribution extends continuousDistributions {
             }
         }
     }
+    @Override
+    public interfaceFunction func() {
+        return null;
+    }
 }

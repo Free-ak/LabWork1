@@ -9,4 +9,8 @@ public class uniformDistribution extends continuousDistributions {
             Fx.add((i- a)/(b - a));
         }
     }
+    @Override
+    public interfaceFunction func() {
+        return null;
+    }
 }

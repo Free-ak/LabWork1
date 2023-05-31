@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ssj-2.5">
+    <CLASSES>
+      <root url="jar://$APPLICATION_HOME_DIR$/jar_files/ssj-2.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,11 +1,11 @@
 package Lab2.continuousDistributions;
 
-import Lab3.integral;
+import Lab2.integral;
 
 public class normalDistribution extends continuousDistributions {
     private final double o;
     private final double A;
-    interfaceFunction func= new interfaceFunction() {
+    public interfaceFunction func= new interfaceFunction() {
         @Override
         public double function(double t) {
             return Math.exp(-(((t - A) * (t - A)) / (2 * Math.pow(o,2))));
@@ -27,5 +27,13 @@ public class normalDistribution extends continuousDistributions {
             fx.add((1/(o*Math.sqrt(2*Math.PI)))*Math.exp(-((Math.pow((i-A),2)/(2*Math.pow(o,2))))));
             Fx.add((1/(o*Math.sqrt(2*Math.PI)))*integral.calculation(-500,i,func));
         }
+    }
+    public normalDistribution( double d4, double d5) {
+        this.A=d4;
+        this.o=d5;
+    }
+    @Override
+    public interfaceFunction func() {
+        return null;
     }
 }

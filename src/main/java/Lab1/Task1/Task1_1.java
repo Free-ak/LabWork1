@@ -16,7 +16,7 @@ public class Task1_1  {
     private final List<Float> row_sort = new ArrayList<>();
 
     public Map<Float, Long> rowStat;
-    private final JFrame frame = simpleGui.frameDefault("Задание №1", 600, 450);
+    private final JFrame frame = simpleGui.frameDefault("Задание №1", 600, 900);
 
     private void Table1() {
         String[] columnname1 = {"Вариационный ряд"};
@@ -25,7 +25,7 @@ public class Task1_1  {
             Object[] addingRow = {aFloat};
             TModel1.addRow(addingRow);
         }
-        simpleGui.scrollDefault(new JTable(TModel1), frame, 140, 380);
+        simpleGui.scrollDefault(new JTable(TModel1), frame, 140, 880);
     }
 
     private void Table2() {
@@ -38,7 +38,7 @@ public class Task1_1  {
             Object[] addingRow = {i.getKey(), i.getValue()};
             TModel2.addRow(addingRow);
         }
-        simpleGui.scrollDefault(new JTable(TModel2), frame, 140, 380);
+        simpleGui.scrollDefault(new JTable(TModel2), frame, 140, 880);
     }
 
     private void Table3() {
@@ -48,7 +48,7 @@ public class Task1_1  {
             Object[] addingRow = {new DecimalFormat("#0.0000").format(i.getKey()), new DecimalFormat("#0.0000").format((double) i.getValue()), new DecimalFormat("#0.0000").format((double) i.getValue() / row_sort.size())};
             TModel3.addRow(addingRow);
         }
-        simpleGui.scrollDefault(new JTable(TModel3), frame, 200, 380);
+        simpleGui.scrollDefault(new JTable(TModel3), frame, 200, 880);
     }
 
 

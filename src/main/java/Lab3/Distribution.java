@@ -4,16 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+
 public abstract class Distribution {
     protected int n;
     protected double p;
     protected int N;
     protected List<Float> values=new ArrayList<>();
+
 //    public Distribution() {
 ////        this.n=n;
 ////        this.p=p;
 ////        this.N=N;
 //    }
+    public int getn() {
+    return n;
+    }
+    public double getp() {
+    return p;
+    }
 
     public void inputOfVariables(Scanner in){
         String ifn = " Введите число n (n > 0): ";
@@ -22,7 +30,7 @@ public abstract class Distribution {
         String ifP = " Введите значение вероятности р (0 <= p <= 1): ";
         System.out.print(ifP);
         p = checkingForPositivityFloat(in,ifP);
-        String ifN = " Введите число N (N > 0): ";
+        String ifN = " Введите число СВ N (N > 0): ";
         System.out.print(ifN);
         N = checkingForPositivityInt(in, ifN);
     }
@@ -45,5 +53,4 @@ public abstract class Distribution {
         }
         return value;
     }
-
 }

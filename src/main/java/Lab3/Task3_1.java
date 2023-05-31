@@ -16,12 +16,12 @@ public class Task3_1 {
 
     public void Task3() throws InputMismatchException {
         Scanner in = new Scanner(System.in);
-        while (true) {
+//        while (true) {
+            try{
                 System.out.print(menu());
-                int choice = in.nextInt();
+                double choice = in.nextDouble();
                 List<Float> row;
-//                if(in.hasNextInt()) {
-                    switch (choice) {
+                    switch ((int)choice) {
                         case (1) -> {
                             binomialLaw bd= new binomialLaw();
                             bd.inputOfVariables(in);
@@ -54,11 +54,12 @@ public class Task3_1 {
                         }
                         default -> System.out.println(System.lineSeparator() + "Это недопустимый вариант меню! Пожалуйста, выберите другой");
                     }
-//                }
-//                else{
-//                    System.out.print(" Введите целое число. Повторите ввод.");
-//                }
-            }
+                }
+                catch(InputMismatchException ex){
+                    System.out.print(" Введите целое число. Повторите ввод.");
+                    System.out.print(menu());
+                }
+//            }
         }
     }
 

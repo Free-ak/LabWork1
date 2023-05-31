@@ -10,7 +10,7 @@ public class inputData {
     public List<Float> input() {
         List<Float> row;
         readFile read = new readFile();
-        File file = new File("src/row");
+        File file = new File("src/row2");
         try {
             row = new ArrayList<>(read.readFileIntoList(file));
         } catch (FileNotFoundException e) {
